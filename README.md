@@ -20,10 +20,8 @@ To write a program to predict the profit of a city using the linear regression m
 /*
 Program to implement the linear regression using gradient descent.
 Developed by: JANARTHANAN B
-RegisterNumber: 212223100014
-```
+RegisterNumber:  212223100014
 */
-
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
@@ -40,7 +38,7 @@ def linear_regression(x1,y,learning_rate = 0.1,num_iters=1000):
         theta-= learning_rate*(1/len(x1))*x.T.dot(errors)
     return theta
 
-data = pd.read_csv("/content/50_Startups.csv")
+data = pd.read_csv("C:/Users/ANANDAN S/Documents/ML labs/50_Startups.csv")
 data.head()
 #Assuming the last column is your target variable y
 x= (data.iloc[1:,:-2].values)
@@ -61,9 +59,12 @@ prediction = prediction.reshape(-1,1)
 pre = scaler.inverse_transform(prediction)
 print(prediction)
 print(f"prediction value: {pre}")
+```
 
 ## Output:
 ![Screenshot 2024-08-30 143952](https://github.com/user-attachments/assets/97fc82d8-bbbf-4953-8a9e-329d834f2d84)
+
+
 ![Screenshot 2024-08-30 143921](https://github.com/user-attachments/assets/0ed7e9b7-ff7e-47f6-b045-623e071af9a2)
 
 
